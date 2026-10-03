@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aera Discovery · New Approach</title>
+<!-- Tailwind CSS v3 CDN with forms and container-queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#f8f9fa',
+              text: '#1a1f2c',
+              muted: '#626d7f',
+              border: '#e5e7eb',
+              'sage-border': '#849b87',
+              'step2-bg': '#edf4ee',
+              'step3-bg': '#edf2f7',
+              'step4-bg': '#f0edf6',
+              'container-tint': '#f4f6f5'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+<!-- Typography styles -->
+<style data-purpose="typography">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+<!-- Custom layout styles -->
+<style data-purpose="custom-layout">
+    .card-shadow {
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+    }
+  </style>
+</head>
+<body class="bg-[#f8f9fa] text-[#1a1f2c] min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+<!-- BEGIN: MainContainer -->
+<main class="max-w-[860px] mx-auto space-y-12">
+<!-- BEGIN: HeaderSection -->
+<header class="space-y-4">
+<!-- Tag / Badge -->
+<div>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider text-slate-600 bg-[#e8ecef] uppercase">
+          Aera Discovery · New Approach
+        </span>
+</div>
+<!-- Main Headline -->
+<h1 class="text-3xl sm:text-[40px] font-bold text-[#111827] tracking-tight leading-[1.18]">
+        From “build the analysis” to<br/>“discover the answer”
+      </h1>
+<!-- Intro paragraph -->
+<p class="text-[14.5px] leading-relaxed text-[#5e6978] max-w-[700px] pt-1">
+        The new approach changes the starting point of Discovery: instead of requiring the user to construct the analytical path, the conversation becomes the entry point and Discovery helps determine what needs to be explored.
+      </p>
+</header>
+<!-- END: HeaderSection -->
+<!-- BEGIN: CoreProblemBox -->
+<!-- Highlighted key problem definition banner -->
+<section class="bg-white rounded-lg border border-[#e5e7eb] border-l-4 border-l-[#7b9982] p-5 shadow-sm" data-purpose="core-problem">
+<p class="text-[13.5px] leading-relaxed text-[#4b5563]">
+<strong class="font-bold text-[#1f2937]">Core problem:</strong> Users often know the business problem, but they don't necessarily know which data, dimensions, filters or visualizations will reveal the answer.
+      </p>
+</section>
+<!-- END: CoreProblemBox -->
+<!-- BEGIN: EarlierDiscoverySection -->
+<section class="space-y-6 pt-1" data-purpose="earlier-discovery-gap">
+<!-- Section Title & Intro Paragraphs -->
+<div class="space-y-3">
+<div class="inline-block">
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">Historical Context</span>
+</div>
+<h2 class="text-2xl sm:text-[26px] font-bold text-[#111827] tracking-tight leading-tight">
+      Earlier Discovery: From Data Exploration to Business Understanding
+    </h2>
+<div class="space-y-2 max-w-[760px] text-[14.5px] leading-relaxed text-[#5e6978]">
+<p>
+        Earlier Discovery could visualize and explore data effectively, but it had a fundamental limitation: it had limited understanding of the user’s intent and the business context behind the data.
+      </p>
+<p>
+        The user still had to translate a business question into the right analytical approach.
+      </p>
+</div>
+</div>
+<!-- Typical Flow & Takeaway Box -->
+<div class="bg-white rounded-2xl border border-[#e5e7eb] p-6 sm:p-7 card-shadow space-y-6">
+<div class="space-y-3">
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">The typical flow</span>
+<div class="flex flex-wrap items-center gap-2 text-xs">
+<span class="px-3.5 py-1.5 rounded-lg bg-[#fafbfc] border border-[#e2e6eb] font-semibold text-[#1f2937] shadow-2xs">Business question</span>
+<span class="text-slate-400 font-medium">→</span>
+<span class="px-3.5 py-1.5 rounded-lg bg-[#fafbfc] border border-[#e2e6eb] font-medium text-[#4b5563] shadow-2xs">User selects data</span>
+<span class="text-slate-400 font-medium">→</span>
+<span class="px-3.5 py-1.5 rounded-lg bg-[#fafbfc] border border-[#e2e6eb] font-medium text-[#4b5563] shadow-2xs">Configures analysis</span>
+<span class="text-slate-400 font-medium">→</span>
+<span class="px-3.5 py-1.5 rounded-lg bg-[#fafbfc] border border-[#e2e6eb] font-medium text-[#4b5563] shadow-2xs">Visualizes results</span>
+<span class="text-slate-400 font-medium">→</span>
+<span class="px-3.5 py-1.5 rounded-lg bg-[#fafbfc] border border-[#e2e6eb] font-medium text-[#4b5563] shadow-2xs">Interprets findings</span>
+</div>
+</div>
+<!-- Key takeaway callout -->
+<div class="bg-[#edf4ee] border border-[#d8e8dc] rounded-xl p-4 sm:p-4.5 flex items-start gap-3">
+<div class="w-5 h-5 rounded-full bg-white/90 border border-[#cde0d2] text-[#486b51] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">ℹ</div>
+<p class="text-[13px] text-[#3e5d46] leading-relaxed font-medium">
+        In other words, Discovery supported the analysis, but the user was responsible for much of the analytical reasoning.
+      </p>
+</div>
+<!-- Deeper gap statement -->
+<div class="border-t border-[#edf0f2] pt-5 space-y-3">
+<p class="text-[13.5px] text-[#4b5563] leading-relaxed">
+        The limitation was therefore not primarily about the quality of the charts or visualizations. The deeper gap was between:
+      </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="bg-[#fafbfc] rounded-xl border border-[#e5e7eb] p-4 text-center sm:text-left flex flex-col justify-center">
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#6b7280] mb-1">Starting intent</span>
+<p class="text-[13.5px] font-bold text-[#111827]">“What business question am I trying to answer?”</p>
+</div>
+<div class="bg-[#fafbfc] rounded-xl border border-[#e5e7eb] p-4 text-center sm:text-left flex flex-col justify-center">
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#6b7280] mb-1">Analytical hurdle</span>
+<p class="text-[13.5px] font-bold text-[#111827]">“What analysis should I perform to answer it?”</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Concrete illustrative business scenario -->
+<div class="bg-white rounded-2xl border border-[#e5e7eb] p-6 sm:p-7 card-shadow space-y-6">
+<div class="border-b border-[#edf0f2] pb-4 space-y-1.5">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-bold tracking-wide uppercase bg-[#edf2f7] text-[#48637e] border border-[#d8e2ec]">Example Scenario</span>
+</div>
+<h3 class="text-base sm:text-lg font-bold text-[#111827] tracking-tight">
+        “Why are inventory levels increasing in North America?”
+      </h3>
+<p class="text-[13px] text-[#6b7280]">
+        To answer this effectively, the system needs to reason through several things:
+      </p>
+</div>
+<!-- 8 key reasoning elements (2-column grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex items-start gap-2.5 bg-[#fafbfc] rounded-lg border border-[#edf0f2] p-3">
+<span class="w-5 h-5 rounded bg-white border border-[#e2e6eb] flex items-center justify-center text-[11px] font-semibold text-slate-500 shrink-0 mt-0.5">1</span>
+<span class="text-[12.5px] text-[#374151] leading-snug font-medium">What does “inventory increasing” mean in this business context?</span>
+</div>
+<div class="flex items-start gap-2.5 bg-[#fafbfc] rounded-lg border border-[#edf0f2] p-3">
+<span class="w-5 h-5 rounded bg-white border border-[#e2e6eb] flex items-center justify-center text-[11px] font-semibold text-slate-500 shrink-0 mt-0.5">2</span>
+<span class="text-[12.5px] text-[#374151] leading-snug font-medium">Which inventory measures are relevant?</span>
+</div>
+<div class="flex items-start gap-2.5 bg-[#fafbfc] rounded-lg border border-[#edf0f2] p-3">
+<span class="w-5 h-5 rounded bg-white border border-[#e2e6eb] flex items-center justify-center text-[11px] font-semibold text-slate-500 shrink-0 mt-0.5">3</span>
+<span class="text-[12.5px] text-[#374151] leading-snug font-medium">Which products, locations, and time periods should be considered?</span>
+</div>
+<div class="flex items-start gap-2.5 bg-[#fafbfc] rounded-lg border border-[#edf0f2] p-3">
+<span class="w-5 h-5 rounded bg-white border border-[#e2e6eb] flex items-center justify-center text-[11px] font-semibold text-slate-500 shrink-0 mt-0.5">4</span>
+<span class="text-[12.5px] text-[#374151] leading-snug font-medium">What factors could be contributing to the increase?</span>
+</div>
+<div class="flex items-start gap-2.5 bg-[#fafbfc] rounded-lg border border-[#edf0f2] p-3">
+<span class="w-5 h-5 rounded bg-white border border-[#e2e6eb] flex items-center justify-center text-[11px] font-semibold text-slate-500 shrink-0 mt-0.5">5</span>
+<span class="text-[12.5px] text-[#374151] leading-snug font-medium">Which dimensions should be investigated or drilled into?</span>
+</div>
+<div class="flex items-start gap-2.5 bg-[#fafbfc] rounded-lg border border-[#edf0f2] p-3">
+<span class="w-5 h-5 rounded bg-white border border-[#e2e6eb] flex items-center justify-center text-[11px] font-semibold text-slate-500 shrink-0 mt-0.5">6</span>
+<span class="text-[12.5px] text-[#374151] leading-snug font-medium">Which visualizations would best reveal those relationships?</span>
+</div>
+<div class="flex items-start gap-2.5 bg-[#fafbfc] rounded-lg border border-[#edf0f2] p-3">
+<span class="w-5 h-5 rounded bg-white border border-[#e2e6eb] flex items-center justify-center text-[11px] font-semibold text-slate-500 shrink-0 mt-0.5">7</span>
+<span class="text-[12.5px] text-[#374151] leading-snug font-medium">What business rules, constraints, or context should influence the interpretation?</span>
+</div>
+<div class="flex items-start gap-2.5 bg-[#fafbfc] rounded-lg border border-[#edf0f2] p-3">
+<span class="w-5 h-5 rounded bg-white border border-[#e2e6eb] flex items-center justify-center text-[11px] font-semibold text-slate-500 shrink-0 mt-0.5">8</span>
+<span class="text-[12.5px] text-[#374151] leading-snug font-medium">Most importantly, does the finding require any business action?</span>
+</div>
+</div>
+<!-- Context explanation -->
+<p class="text-[13px] leading-relaxed text-[#5e6978] pt-2 border-t border-[#edf0f2]">
+      Earlier Discovery primarily helped with the data exploration and visualization part of this process. The user had to provide much of the context, determine what to investigate, select the relevant data, and decide how to interpret the result.
+    </p>
+<!-- Fundamental shift contrast -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+<div class="bg-[#fafbfc] rounded-xl border border-[#e5e7eb] p-5 flex flex-col justify-between space-y-2">
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">Earlier Discovery</span>
+<p class="text-[14px] font-bold text-[#1f2937] leading-snug">
+          “Give me the tools to explore the data.”
+        </p>
+</div>
+<div class="bg-[#edf4ee] rounded-xl border border-[#d8e8dc] p-5 flex flex-col justify-between space-y-2">
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#486b51]">The opportunity for New Discovery</span>
+<p class="text-[14px] font-bold text-[#1f2937] leading-snug">
+          “Help me understand the business question, determine what to investigate, and guide me toward the relevant insight.”
+        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: EarlierDiscoverySection -->
+<!-- BEGIN: HowItWorksCard -->
+<!-- Master workflow card demonstrating four interconnected progressive steps -->
+<section class="bg-white rounded-2xl border border-[#e5e7eb] p-7 sm:p-8 card-shadow space-y-8" data-purpose="how-it-solves-it">
+<!-- Section Header Inside Card -->
+<div class="text-center space-y-1.5">
+<h2 class="text-[20px] font-bold text-[#111827] tracking-tight">How the new approach solves it</h2>
+<p class="text-[13px] text-[#6b7280]">The user expresses intent. Discovery works out the analytical path.</p>
+</div>
+<!-- 4 Step Interactive Pathway -->
+<div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-center gap-y-4 gap-x-2">
+<!-- Step 01 -->
+<div class="bg-[#fafbfc] rounded-xl border border-[#ebeef1] p-4 flex flex-col justify-between h-[190px]">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-6 h-6 rounded bg-white border border-[#e5e7eb] flex items-center justify-center text-xs text-slate-500 font-medium">?</span>
+<span class="text-xs font-semibold text-slate-400">01</span>
+</div>
+<h3 class="text-[13px] font-bold text-[#1f2937] leading-snug">Business question</h3>
+</div>
+<p class="text-[11.5px] leading-snug text-[#64748b]">
+            The user starts with a problem or situation, not a predefined dashboard.
+          </p>
+</div>
+<!-- Arrow separator -->
+<div class="hidden md:flex justify-center text-slate-400 font-medium select-none">→</div>
+<!-- Step 02 -->
+<div class="bg-[#edf4ee] rounded-xl border border-[#d8e8dc] p-4 flex flex-col justify-between h-[190px]">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-6 h-6 rounded bg-white/80 border border-[#cde0d2] flex items-center justify-center text-xs text-[#486b51] font-semibold">+</span>
+<span class="text-xs font-semibold text-[#5d8367]">02</span>
+</div>
+<h3 class="text-[13px] font-bold text-[#1f2937] leading-snug">Conversational Discovery</h3>
+</div>
+<p class="text-[11.5px] leading-snug text-[#526a57]">
+            Aera interprets the intent and identifies the relevant analytical context.
+          </p>
+</div>
+<!-- Arrow separator -->
+<div class="hidden md:flex justify-center text-slate-400 font-medium select-none">→</div>
+<!-- Step 03 -->
+<div class="bg-[#edf2f7] rounded-xl border border-[#d8e2ec] p-4 flex flex-col justify-between h-[190px]">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-6 h-6 rounded bg-white/80 border border-[#ccd9e6] flex items-center justify-center text-[10px] text-[#48637e] font-medium">▟</span>
+<span class="text-xs font-semibold text-[#66809c]">03</span>
+</div>
+<h3 class="text-[13px] font-bold text-[#1f2937] leading-snug">Analysis + visualization</h3>
+</div>
+<p class="text-[11.5px] leading-snug text-[#566e86]">
+            Relevant data is analyzed and presented in a useful visual form.
+          </p>
+</div>
+<!-- Arrow separator -->
+<div class="hidden md:flex justify-center text-slate-400 font-medium select-none">→</div>
+<!-- Step 04 -->
+<div class="bg-[#f0edf6] rounded-xl border border-[#ded7e8] p-4 flex flex-col justify-between h-[190px]">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-6 h-6 rounded bg-white/80 border border-[#cfc4dc] flex items-center justify-center text-xs text-[#634e79] font-medium">↗</span>
+<span class="text-xs font-semibold text-[#7c6a91]">04</span>
+</div>
+<h3 class="text-[13px] font-bold text-[#1f2937] leading-snug">Explore &amp; act</h3>
+</div>
+<p class="text-[11.5px] leading-snug text-[#655877]">
+            The user asks follow-ups, drills deeper and moves toward a decision.
+          </p>
+</div>
+</div>
+<!-- What Discovery Brings Together (Dashed Box) -->
+<div class="border border-dashed border-[#cfd6dd] rounded-xl p-5 bg-[#fafbfc]/60 text-center space-y-3">
+<h4 class="text-[11px] font-bold tracking-widest text-[#596677] uppercase">What discovery brings together</h4>
+<div class="flex flex-wrap items-center justify-center gap-2 max-w-[620px] mx-auto">
+<span class="px-3.5 py-1 text-xs font-medium text-[#4b5563] bg-white border border-[#e2e6eb] rounded-full shadow-2xs">Business context</span>
+<span class="px-3.5 py-1 text-xs font-medium text-[#4b5563] bg-white border border-[#e2e6eb] rounded-full shadow-2xs">Relevant data</span>
+<span class="px-3.5 py-1 text-xs font-medium text-[#4b5563] bg-white border border-[#e2e6eb] rounded-full shadow-2xs">Measures</span>
+<span class="px-3.5 py-1 text-xs font-medium text-[#4b5563] bg-white border border-[#e2e6eb] rounded-full shadow-2xs">Dimensions</span>
+<span class="px-3.5 py-1 text-xs font-medium text-[#4b5563] bg-white border border-[#e2e6eb] rounded-full shadow-2xs">Analytical tools</span>
+<span class="px-3.5 py-1 text-xs font-medium text-[#4b5563] bg-white border border-[#e2e6eb] rounded-full shadow-2xs">Visualizations</span>
+</div>
+</div>
+</section>
+<!-- END: HowItWorksCard -->
+<!-- BEGIN: ShiftComparisonSection -->
+<section class="space-y-4 pt-2" data-purpose="the-shift">
+<!-- Section Headers -->
+<div>
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">The shift</span>
+<h2 class="text-2xl font-bold text-[#111827] tracking-tight mt-0.5">What actually changes?</h2>
+</div>
+<!-- Side-by-side comparison cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Left: Earlier Discovery -->
+<article class="bg-white rounded-xl border border-[#e5e7eb] p-5 card-shadow flex flex-col justify-between">
+<div class="space-y-1 mb-6">
+<h3 class="text-sm font-bold text-[#111827]">Earlier Discovery</h3>
+<p class="text-xs text-[#6b7280]">The user drives most of the analytical setup.</p>
+</div>
+<!-- Workflow sequence pills -->
+<div class="space-y-2">
+<div class="flex items-center gap-1.5 flex-wrap text-xs text-[#4b5563]">
+<span class="px-2.5 py-1 border border-[#e2e6eb] rounded-md bg-[#fafbfc] text-[11px]">Question</span>
+<span class="text-slate-400 text-xs">→</span>
+<span class="px-2.5 py-1 border border-[#e2e6eb] rounded-md bg-[#fafbfc] text-[11px]">Choose data</span>
+<span class="text-slate-400 text-xs">→</span>
+<span class="px-2.5 py-1 border border-[#e2e6eb] rounded-md bg-[#fafbfc] text-[11px]">Configure</span>
+<span class="text-slate-400 text-xs">→</span>
+</div>
+<div>
+<span class="inline-block px-2.5 py-1 border border-[#e2e6eb] rounded-md bg-[#fafbfc] text-[11px] text-[#4b5563]">Visualize</span>
+</div>
+</div>
+</article>
+<!-- Right: Chat Discovery -->
+<article class="bg-[#fcfdfd] rounded-xl border border-[#e5e7eb] p-5 card-shadow flex flex-col justify-between">
+<div class="space-y-1 mb-6">
+<h3 class="text-sm font-bold text-[#111827]">Chat Discovery</h3>
+<p class="text-xs text-[#6b7280]">The user describes intent and the system helps construct the analytical path.</p>
+</div>
+<!-- Workflow sequence pills -->
+<div class="space-y-2">
+<div class="flex items-center gap-1.5 flex-wrap text-xs text-[#4b5563]">
+<span class="px-2.5 py-1 border border-[#e2e6eb] rounded-md bg-white text-[11px]">Question</span>
+<span class="text-slate-400 text-xs">→</span>
+<span class="px-2.5 py-1 border border-[#e2e6eb] rounded-md bg-white text-[11px]">Discover context</span>
+<span class="text-slate-400 text-xs">→</span>
+<span class="px-2.5 py-1 border border-[#e2e6eb] rounded-md bg-white text-[11px]">Analyze</span>
+<span class="text-slate-400 text-xs">→</span>
+</div>
+<div>
+<span class="inline-block px-2.5 py-1 border border-[#e2e6eb] rounded-md bg-white text-[11px] text-[#4b5563]">Explore</span>
+</div>
+</div>
+</article>
+</div>
+</section><section class="space-y-4 pt-4" data-purpose="evolution-table">
+<p class="text-[14.5px] leading-relaxed text-[#5e6978]">
+    The simplest way to think about the evolution is:
+  </p>
+<div class="bg-white rounded-xl border border-[#e5e7eb] overflow-hidden card-shadow p-6 sm:p-7">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse text-[13px]">
+<thead>
+<tr class="border-b border-[#e5e7eb]">
+<th class="py-3.5 pr-6 font-semibold text-[#1f2937] w-1/4"></th>
+<th class="py-3.5 px-6 font-bold text-[#111827] text-sm w-[37.5%]">Old Discovery</th>
+<th class="py-3.5 pl-6 font-bold text-[#111827] text-sm w-[37.5%]">
+<div class="flex items-center justify-between">
+<span class="">New Discovery</span>
+<button aria-label="Copy table" class="text-slate-400 hover:text-slate-600 transition-colors p-1 rounded inline-flex items-center justify-center" title="Copy table" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<rect height="13" rx="2" ry="2" width="13" x="9" y="9"></rect>
+<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+</svg>
+</button>
+</div>
+</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#edf0f2]">
+<tr>
+<td class="py-3.5 pr-6 font-semibold text-[#1f2937] align-top">Primary idea</td>
+<td class="py-3.5 px-6 text-[#5e6978] align-top">Explore/build a data analysis</td>
+<td class="py-3.5 pl-6 text-[#1f2937] font-medium align-top">Explore data and insights more fluidly</td>
+</tr>
+<tr>
+<td class="py-3.5 pr-6 font-semibold text-[#1f2937] align-top">Starting point</td>
+<td class="py-3.5 px-6 text-[#5e6978] align-top">User manually configures the analysis</td>
+<td class="py-3.5 pl-6 text-[#1f2937] font-medium align-top">User can start from an insight/output and investigate</td>
+</tr>
+<tr>
+<td class="py-3.5 pr-6 font-semibold text-[#1f2937] align-top">Data selection</td>
+<td class="py-3.5 px-6 text-[#5e6978] align-top">More explicit/manual</td>
+<td class="py-3.5 pl-6 text-[#1f2937] font-medium align-top">More guided/contextual</td>
+</tr>
+<tr>
+<td class="py-3.5 pr-6 font-semibold text-[#1f2937] align-top">Visualization</td>
+<td class="py-3.5 px-6 text-[#5e6978] align-top">User constructs views</td>
+<td class="py-3.5 pl-6 text-[#1f2937] font-medium align-top">Visualization is more integrated into exploration</td>
+</tr>
+<tr>
+<td class="py-3.5 pr-6 font-semibold text-[#1f2937] align-top">Interaction</td>
+<td class="py-3.5 px-6 text-[#5e6978] align-top">More tool-oriented</td>
+<td class="py-3.5 pl-6 text-[#1f2937] font-medium align-top">More analysis-oriented</td>
+</tr>
+<tr>
+<td class="py-3.5 pr-6 font-semibold text-[#1f2937] align-top">Workflow</td>
+<td class="py-3.5 px-6 text-[#5e6978] align-top">Configure → update → inspect</td>
+<td class="py-3.5 pl-6 text-[#1f2937] font-medium align-top">Explore → investigate → refine</td>
+</tr>
+<tr>
+<td class="py-3.5 pr-6 font-semibold text-[#1f2937] align-top">User mindset</td>
+<td class="py-3.5 px-6 text-[#5e6978] align-top">“How do I build this view?”</td>
+<td class="py-3.5 pl-6 text-[#1f2937] font-medium align-top">“What does this data tell me?”</td>
+</tr>
+<tr>
+<td class="py-3.5 pr-6 font-semibold text-[#1f2937] align-top">Relationship to AI</td>
+<td class="py-3.5 px-6 text-[#5e6978] align-top">More standalone analytics</td>
+<td class="py-3.5 pl-6 text-[#1f2937] font-medium align-top">Can connect with Aera's conversational/AI experience</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><!-- BEGIN: DiscoveryTaxonomyTreeSection -->
+<section class="space-y-4 pt-2" data-purpose="discovery-taxonomy-tree">
+<div class="bg-white rounded-2xl border border-[#e5e7eb] p-6 sm:p-8 card-shadow space-y-6">
+<div class="flex items-center justify-between border-b border-[#edf0f2] pb-4">
+<div>
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">Architecture &amp; Taxonomy</span>
+<h3 class="text-lg font-bold text-[#111827] tracking-tight mt-0.5">Discovery modes</h3>
+</div>
+<button aria-label="Copy diagram" class="text-slate-400 hover:text-slate-600 transition-colors p-1.5 rounded-lg border border-[#e5e7eb] inline-flex items-center justify-center bg-[#fafbfc]" title="Copy diagram" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<rect height="13" rx="2" ry="2" width="13" x="9" y="9"></rect>
+<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+</svg>
+</button>
+</div>
+<!-- Tree visual container -->
+<div class="flex flex-col items-center max-w-xl mx-auto py-2">
+<!-- Root Node -->
+<div class="px-5 py-2 rounded-lg bg-[#111827] text-white text-xs font-bold tracking-widest uppercase shadow-sm">
+        DISCOVERY
+      </div>
+<!-- Stem down -->
+<div class="w-px h-6 bg-[#cbd5e1]"></div>
+<!-- Split horizontal line -->
+<div class="w-[70%] border-t border-[#cbd5e1] relative">
+<!-- Left drop -->
+<div class="absolute left-0 top-0 w-px h-6 bg-[#cbd5e1]"></div>
+<!-- Right drop -->
+<div class="absolute right-0 top-0 w-px h-6 bg-[#cbd5e1]"></div>
+</div>
+<!-- Two Branches Grid -->
+<div class="grid grid-cols-2 gap-4 sm:gap-8 w-full pt-6">
+<!-- Left Branch: Guided / New -->
+<div class="bg-[#edf4ee] border border-[#d8e8dc] rounded-xl p-4 sm:p-5 flex flex-col justify-between">
+<div>
+<div class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold text-[#486b51] bg-white/80 border border-[#cde0d2] mb-2 uppercase tracking-wide">
+              Guided / New
+            </div>
+<div class="text-sm font-bold text-[#1f2937] mb-3">
+              “Help me find…”
+            </div>
+<ul class="text-[12px] space-y-1.5 text-[#526a57]">
+<li class="flex items-center gap-1.5">
+<span class="text-[#7b9982]">•</span> Recommendations
+              </li>
+<li class="flex items-center gap-1.5">
+<span class="text-[#7b9982]">•</span> Suggested data
+              </li>
+<li class="flex items-center gap-1.5">
+<span class="text-[#7b9982]">•</span> Faster exploration
+              </li>
+</ul>
+</div>
+</div>
+<!-- Right Branch: Manual / Classic -->
+<div class="bg-[#fafbfc] border border-[#e2e6eb] rounded-xl p-4 sm:p-5 flex flex-col justify-between">
+<div>
+<div class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold text-[#596677] bg-white border border-[#e2e6eb] mb-2 uppercase tracking-wide">
+              Manual / Classic
+            </div>
+<div class="text-sm font-bold text-[#1f2937] mb-3">
+              “Let me choose…”
+            </div>
+<ul class="text-[12px] space-y-1.5 text-[#64748b]">
+<li class="flex items-center gap-1.5">
+<span class="text-slate-400">•</span> Full control
+              </li>
+<li class="flex items-center gap-1.5">
+<span class="text-slate-400">•</span> Select columns
+              </li>
+<li class="flex items-center gap-1.5">
+<span class="text-slate-400">•</span> Custom analysis
+              </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: DiscoveryTaxonomyTreeSection -->
+<!-- BEGIN: Section05WhatChanges -->
+<section class="space-y-4 pt-4" data-purpose="section-05-what-changes">
+<header class="space-y-1">
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">05 · WHAT CHANGES</span>
+<h2 class="text-2xl font-bold text-[#111827] tracking-tight">Manual and Chat Discovery serve different starting points.</h2>
+<p class="text-[14.5px] leading-relaxed text-[#5e6978] max-w-[700px] pt-1">
+      The new experience does not make direct manipulation irrelevant. Instead, it adds a second way of entering the analytical experience.
+    </p>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+<!-- Card 1: Manual Discovery -->
+<article class="bg-white rounded-xl border border-[#e5e7eb] p-6 card-shadow flex flex-col justify-between space-y-5">
+<div class="space-y-3">
+<span class="inline-block px-2.5 py-1 text-[11px] font-bold tracking-wider uppercase text-[#4b5563] bg-[#fafbfc] border border-[#e2e6eb] rounded-md">
+          Manual Discovery
+        </span>
+<h3 class="text-base font-bold text-[#111827]">“I know what I want to explore.”</h3>
+<p class="text-[13px] text-[#6b7280] leading-snug">
+          The user directly controls the analytical experience.
+        </p>
+</div>
+<ul class="space-y-2 text-[12.5px] text-[#4b5563] border-t border-[#edf0f2] pt-4">
+<li class="flex items-start gap-2">
+<span class="text-slate-400">•</span>
+<span class="">Select data and dimensions</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-slate-400">•</span>
+<span class="">Configure filters and measures</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-slate-400">•</span>
+<span class="">Modify visualizations</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-slate-400">•</span>
+<span class="">Drill into details</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-slate-400">•</span>
+<span class="">Explore known analytical questions</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-slate-400">•</span>
+<span class="">Create repeatable analytical views</span>
+</li>
+</ul>
+</article>
+<!-- Card 2: Chat Discovery -->
+<article class="bg-[#fcfdfd] rounded-xl border border-[#d8e8dc] p-6 card-shadow flex flex-col justify-between space-y-5">
+<div class="space-y-3">
+<span class="inline-block px-2.5 py-1 text-[11px] font-bold tracking-wider uppercase text-[#486b51] bg-[#edf4ee] border border-[#cde0d2] rounded-md">
+          Chat Discovery
+        </span>
+<h3 class="text-base font-bold text-[#111827]">“I know the problem, but not the path.”</h3>
+<p class="text-[13px] text-[#526a57] leading-snug">
+          The user expresses intent and lets the system help discover the analytical path.
+        </p>
+</div>
+<ul class="space-y-2 text-[12.5px] text-[#4b5563] border-t border-[#edf0f2] pt-4">
+<li class="flex items-start gap-2">
+<span class="text-[#7b9982]">•</span>
+<span class="">Ask questions in natural language</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-[#7b9982]">•</span>
+<span class="">Discover relevant context automatically</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-[#7b9982]">•</span>
+<span class="">Generate analytical outputs</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-[#7b9982]">•</span>
+<span class="">Ask follow-up questions</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-[#7b9982]">•</span>
+<span class="">Investigate adjacent issues</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-[#7b9982]">•</span>
+<span class="">Move from insight toward action</span>
+</li>
+</ul>
+</article>
+</div>
+</section>
+<!-- END: Section05WhatChanges -->
+<!-- END: ShiftComparisonSection -->
+<!-- BEGIN: WhatThisUnlocksSection -->
+<!-- Container holding 6 key benefits in a 3x2 grid -->
+<section class="bg-[#eef2f1] rounded-2xl border border-[#dfe5e3] p-6 sm:p-8 space-y-6" data-purpose="unlocks-benefits">
+<!-- Headline -->
+<div class="text-center">
+<h2 class="text-[20px] font-bold text-[#111827] tracking-tight">What this unlocks</h2>
+</div>
+<!-- 3x2 Benefit Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+<!-- Feature 01 -->
+<div class="bg-white rounded-xl border border-[#e2e7e5] p-4 space-y-2 card-shadow flex flex-col">
+<span class="text-xs font-semibold text-slate-400">01</span>
+<h3 class="text-xs font-bold text-[#111827]">Lower entry barrier</h3>
+<p class="text-[11.5px] leading-relaxed text-[#64748b]">
+            Users can start with a business question instead of learning how to construct the analysis first.
+          </p>
+</div>
+<!-- Feature 02 -->
+<div class="bg-white rounded-xl border border-[#e2e7e5] p-4 space-y-2 card-shadow flex flex-col">
+<span class="text-xs font-semibold text-slate-400">02</span>
+<h3 class="text-xs font-bold text-[#111827]">Faster investigation</h3>
+<p class="text-[11.5px] leading-relaxed text-[#64748b]">
+            Less time is spent deciding which data, dimensions and visualizations to assemble.
+          </p>
+</div>
+<!-- Feature 03 -->
+<div class="bg-white rounded-xl border border-[#e2e7e5] p-4 space-y-2 card-shadow flex flex-col">
+<span class="text-xs font-semibold text-slate-400">03</span>
+<h3 class="text-xs font-bold text-[#111827]">Progressive discovery</h3>
+<p class="text-[11.5px] leading-relaxed text-[#64748b]">
+            The investigation can evolve naturally through follow-up questions.
+          </p>
+</div>
+<!-- Feature 04 -->
+<div class="bg-white rounded-xl border border-[#e2e7e5] p-4 space-y-2 card-shadow flex flex-col">
+<span class="text-xs font-semibold text-slate-400">04</span>
+<h3 class="text-xs font-bold text-[#111827]">Context-aware analysis</h3>
+<p class="text-[11.5px] leading-relaxed text-[#64748b]">
+            Relevant business context can become part of the analytical journey rather than being manually assembled.
+          </p>
+</div>
+<!-- Feature 05 -->
+<div class="bg-white rounded-xl border border-[#e2e7e5] p-4 space-y-2 card-shadow flex flex-col">
+<span class="text-xs font-semibold text-slate-400">05</span>
+<h3 class="text-xs font-bold text-[#111827]">Visual answers</h3>
+<p class="text-[11.5px] leading-relaxed text-[#64748b]">
+            The output is not only conversational text; analysis can be expressed visually.
+          </p>
+</div>
+<!-- Feature 06 -->
+<div class="bg-white rounded-xl border border-[#e2e7e5] p-4 space-y-2 card-shadow flex flex-col">
+<span class="text-xs font-semibold text-slate-400">06</span>
+<h3 class="text-xs font-bold text-[#111827]">Deeper exploration</h3>
+<p class="text-[11.5px] leading-relaxed text-[#64748b]">
+            Users can move from an initial answer into increasingly detailed investigation without starting over.
+          </p>
+</div>
+</div>
+</section>
+<!-- END: WhatThisUnlocksSection -->
+<!-- BEGIN: ConclusionFooter -->
+<footer class="text-center pt-4 pb-8 space-y-3 max-w-[620px] mx-auto" data-purpose="conclusion">
+<h2 class="text-xl sm:text-[22px] font-bold text-[#111827] leading-snug tracking-tight">
+        Manual Discovery gives control. Chat Discovery gives a new starting point.
+      </h2>
+<p class="text-[13px] leading-relaxed text-[#64748b]">
+        The goal is not to remove manual analysis. It is to make Discovery accessible from the moment a user has a question — even when they don't yet know how that question should be analyzed.
+      </p>
+</footer>
+<!-- END: ConclusionFooter -->
+</main>
+<!-- END: MainContainer -->
+</body></html>
